@@ -1,0 +1,82 @@
+.wrapper
+  = render partial: "side-bar"
+  .main
+    .main__top
+      .main__top__company_name AAA社
+      .main__top__box
+        = link_to new_debt_path do
+          .main__top__box__create 借入金登録
+        = link_to debts_transition_balance_path do
+          .main__top__box__index 借入金推移
+        = link_to root_path do
+          .main__top__box__index 借入金一覧
+    .main__contents
+      .main__contents__nav
+        = link_to debts_transition_balance_path do
+          .main__contents__nav__link 残高推移
+        = link_to debts_transition_IncDec_path do
+          .main__contents__nav__link 増減
+        = link_to debts_transition_InOut_path do
+          .main__contents__nav__link 収支
+      %table.main__contens__table
+        %tr.main__contents__table__head
+          %th.main__contents__table__head__cell
+          %th.main__contents__table__head__cell
+          %th.main__contents__table__head__cell 2020-04
+          %th.main__contents__table__head__cell 2020-05
+          %th.main__contents__table__head__cell 2020-06
+          %th.main__contents__table__head__cell 2020-07
+          %th.main__contents__table__head__cell 2020-08
+          %th.main__contents__table__head__cell 2020-09
+          %th.main__contents__table__head__cell 2020-10
+          %th.main__contents__table__head__cell 2020-11
+          %th.main__contents__table__head__cell 2021-12
+          %th.main__contents__table__head__cell 2022-01
+          %th.main__contents__table__head__cell 2023-02
+          %th.main__contents__table__head__cell 2024-03
+        %tr.main__contents__table__record
+          %td.main__contents__table__record__cell--sticky みずほ銀行
+          %td.main__contents__table__record__cell--button 詳細
+          %td.main__contents__table__record__cell 50,000
+          %td.main__contents__table__record__cell 48,000
+          %td.main__contents__table__record__cell 46,000
+          %td.main__contents__table__record__cell 44,000
+          %td.main__contents__table__record__cell 42,000
+          %td.main__contents__table__record__cell 40,000
+          %td.main__contents__table__record__cell 38,000
+          %td.main__contents__table__record__cell 36,000
+          %td.main__contents__table__record__cell 34,000
+          %td.main__contents__table__record__cell 32,000
+          %td.main__contents__table__record__cell 30,000
+          %td.main__contents__table__record__cell 28,000
+        %tr.main__contents__table__record#record_1
+          %td.main__contents__table__record__cell--sticky みずほ銀行
+          %td.main__contents__table__record__cell--button 詳細
+          %td.main__contents__table__record__cell 50,000
+          %td.main__contents__table__record__cell 48,000
+          %td.main__contents__table__record__cell 46,000
+          %td.main__contents__table__record__cell 44,000
+          %td.main__contents__table__record__cell 42,000
+          %td.main__contents__table__record__cell 40,000
+          %td.main__contents__table__record__cell 38,000
+          %td.main__contents__table__record__cell 36,000
+          %td.main__contents__table__record__cell 34,000
+          %td.main__contents__table__record__cell 32,000
+          %td.main__contents__table__record__cell 30,000
+          %td.main__contents__table__record__cell 28,000
+        %tr.main__contents__table__record#record_1
+          %td.main__contents__table__record__cell--sticky みずほ銀行
+          %td.main__contents__table__record__cell--button 詳細
+          %td.main__contents__table__record__cell 50,000
+          %td.main__contents__table__record__cell 48,000
+          %td.main__contents__table__record__cell 46,000
+          %td.main__contents__table__record__cell 44,000
+          %td.main__contents__table__record__cell 42,000
+          %td.main__contents__table__record__cell 40,000
+          %td.main__contents__table__record__cell 38,000
+          %td.main__contents__table__record__cell 36,000
+          %td.main__contents__table__record__cell 34,000
+          %td.main__contents__table__record__cell 32,000
+          %td.main__contents__table__record__cell 30,000
+          %td.main__contents__table__record__cell 28,000
+    

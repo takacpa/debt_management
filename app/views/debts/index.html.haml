@@ -4,10 +4,12 @@
     .main__top
       .main__top__company_name AAA社
       .main__top__box
-        = link_to "#" do
+        = link_to new_debt_path do
           .main__top__box__create 借入金登録
-        = link_to "#" do
+        = link_to debts_transition_balance_path do
           .main__top__box__index 借入金推移
+        = link_to root_path do
+          .main__top__box__index 借入金一覧
     .main__contents
       %table.main__contens__table
         %tr.main__contents__table__head

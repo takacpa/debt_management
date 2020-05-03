@@ -6,7 +6,6 @@
   width: 300px;
   height: 100％;
   &__top{
-    
     height: 100px;
     padding: 0 20px;
     background-color: #253141;
@@ -68,7 +67,21 @@
     height: calc(100vh - 100px);
     padding: 20px 20px 20px 20px;
     background-color: #ffffff;
+    white-space:nowrap;
     overflow: scroll;
+    &__nav{
+      height: 20px;
+      line-height: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      &__link{
+        margin-right: 20px;
+        border: solid #38aef0 1px;
+        color: #38aef0;
+        padding: 5px;
+      }
+    }
     &__table{
       width: 100%;
       &__head{
@@ -87,9 +100,39 @@
       &__record{
         height: 50px;
         border-bottom: 1px solid #E4E0D7;
+        &--detail{
+          height: 30px;
+          border-bottom: 1px solid #E4E0D7;
+        }
         &__cell{
           padding-left: 20px;
           width: 150px;
+          &--button{
+            color: #38aef0;
+            font-size: 16px;
+            text-align: center;
+          }
+          &--sticky{
+            padding-left: 20px;
+            width: 150px;
+            position: -webkit-sticky;
+            position: sticky;
+            left: 0;
+            background-color: #f9f7f4;
+          }
+          &--detail{
+            padding-left: 20px;
+            width: 150px;
+            background-color: #f9f7f4;
+            &--sticky{
+              padding-left: 30px;
+              width: 150px;
+              position: -webkit-sticky;
+              position: sticky;
+              left: 0;
+              background-color: #f9f7f4;
+            }
+          }
         }
         &--total{
           height: 50px;

@@ -4,11 +4,11 @@
     .main__top
       .main__top__company_name AAA社
       .main__top__box
-        = link_to "#" do
+        = link_to new_debt_path do
           .main__top__box__create 借入金登録
-        = link_to "#" do
+        = link_to debts_transition_balance_path do
           .main__top__box__index 借入金推移
-        = link_to "#" do
+        = link_to root_path do
           .main__top__box__index 借入金一覧
     .main__contents
       = form_with model:@debt, url: new_debt_path, class: 'main__contents__form', local: true do |f|
