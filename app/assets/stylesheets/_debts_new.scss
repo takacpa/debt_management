@@ -1,0 +1,103 @@
+.main__contents__form{
+  background-color:  #D2D2D2;
+  padding: 20px;
+  &__field{
+    width: 343px;
+    height: 80px;
+    margin-top: 32px;
+    &__label{
+      font: 14px sans-serif;
+      font-weight: 600;
+    }
+    &__require{
+      font: 12px arial;
+      color: #ffffff;
+      background-color:#ea352d;
+      margin-left: 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      vertical-align: top;
+    }
+    &__optional{
+      font: 12px arial;
+      color: #ffffff;
+      background-color:#2F3E51;
+      margin-left: 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      vertical-align: top;
+    }
+    &__input--one{
+      width: 342px;
+      height: 50px;
+      padding: 10px 16px 8px 16px;
+      margin-top: 8px;
+      border: solid 1px #cccccc;
+      border-radius: 0;
+    }
+    &__input--select{
+      width: 342px;
+      height: 50px;
+      margin-top: 8px;
+      border: solid 1px #cccccc;
+      border-radius: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: image-url("icon/icon_arrow_bottom.png");
+      background-repeat: no-repeat;
+      background-size: 15px 15px;
+      background-position: right 5px center;
+      text-indent: 20%;
+               }
+  }
+  &__submit{
+    width: 341px;
+    height: 48px;
+    &__btn{
+    width: 341px;
+    height: 48px;
+    background-color: #253141;
+    color: #ffffff;
+    text-align: center;
+    line-height: 48px;
+    }
+  }
+}
+
+.year{
+  width: 74px;
+  height: 46px;
+  margin-top: 8px;
+  border: solid 1px #cccccc;
+  border-radius: 0;
+  font-size: 12px;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: image-url("icon/icon_arrow_bottom.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: right 5px center;
+  text-indent: 20%;
+}
+.month,.day{
+  width: 74px;
+  height: 46px;
+  margin-top: 8px;
+  margin-left: 4px;
+  border: solid 1px #cccccc;
+  border-radius: 0;
+  font-size: 12px;
+  background-color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: image-url("icon/icon_arrow_bottom.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: right 5px center;
+  text-indent: 20%;
+}
+

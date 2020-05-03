@@ -10,11 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_30_134347) do
+ActiveRecord::Schema.define(version: 2020_05_02_070920) do
 
   create_table "debts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title", null: false
+    t.integer "bank_id", null: false
+    t.integer "principal", null: false
+    t.date "borrowing_day"
+    t.date "repayment_deadline"
+    t.integer "debt_type_id", null: false
+    t.date "repayment_start_day", null: false
+    t.integer "number_of_repayment", null: false
+    t.integer "repayment_first", null: false
+    t.integer "repayment_second", null: false
+    t.integer "repayment_cycle_id", null: false
+    t.decimal "interrest_rate", precision: 10, null: false
+    t.integer "company_id", null: false
   end
 
 end

@@ -1,0 +1,76 @@
+.wrapper
+  = render partial: "side-bar"
+  .main
+    .main__top
+      .main__top__company_name AAA社
+      .main__top__box
+        = link_to "#" do
+          .main__top__box__create 借入金登録
+        = link_to "#" do
+          .main__top__box__index 借入金推移
+        = link_to "#" do
+          .main__top__box__index 借入金一覧
+    .main__contents
+      = form_with model:@debt, url: new_debt_path, class: 'main__contents__form', local: true do |f|
+        .main__contents__form__field
+          = f.label "タイトル", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.text_field :title, autofocus: true, class:"main__contents__form__field__input--one"
+        .main__contents__form__field
+          = f.label "金融機関", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.collection_select :bank_id, Bank.all, :id, :name, {include_blank: true},{class:"main__contents__form__field__input--select"}
+        .main__contents__form__field
+          = f.label "当初元金", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.text_field :principal, class:"main__contents__form__field__input--one"
+        .main__contents__form__field
+          = f.label "借入日", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__optional 任意
+          %br/
+          != sprintf(f.date_select(:borrowing_day, use_month_numbers: true,start_year: 2000, end_year: (Time.now.year - 0), include_blank: true, with_css_classes:"",date_separator:'%s'),'年','月')+'日'
+        .main__contents__form__field
+          = f.label "返済期限", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__optional 任意
+          %br/
+          != sprintf(f.date_select(:repayment_deadline, use_month_numbers: true,start_year: 2000, end_year: (Time.now.year - 0), include_blank: true, with_css_classes:"",date_separator:'%s'),'年','月')+'日'
+        .main__contents__form__field
+          = f.label "借入金種類", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.collection_select :bank_id, Debt_type.all, :id, :name, {include_blank: true},{class:"main__contents__form__field__input--select"}
+        .main__contents__form__field
+          = f.label "返済開始日", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          != sprintf(f.date_select(:repayment_start_day, use_month_numbers: true,start_year: 2000, end_year: (Time.now.year - 0), include_blank: true, with_css_classes:"",date_separator:'%s'),'年','月')+'日'
+        .main__contents__form__field
+          = f.label "返済回数", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.text_field :number_of_repayment, class:"main__contents__form__field__input--one"
+        .main__contents__form__field
+          = f.label "１回目返済金額", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.text_field :repayment_first, class:"main__contents__form__field__input--one"
+        .main__contents__form__field
+          = f.label "２回目以降返済期限", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.text_field :repayment_second, class:"main__contents__form__field__input--one"
+        .main__contents__form__field
+          = f.label "返済サイクル", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.collection_select :bank_id, Repayment_cycle.all, :id, :name, {include_blank: true},{class:"main__contents__form__field__input--select"}
+        .main__contents__form__field
+          = f.label "利率", class:"main__contents__form__field__label"
+          %span.main__contents__form__field__require 必須
+          %br/
+          = f.text_field :interrest_rate, class:"main__contents__form__field__input--one"
+        .main__contents__form__submit
+        = f.submit "登録する",class:"main__contents__form__submit__btn"
