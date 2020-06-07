@@ -1,5 +1,5 @@
 class Repayment_cycle < ActiveHash::Base
   self.data = [
-      {id: 1, name: '北海道'}, {id: 2, name: '青森県'}, {id: 3, name: '岩手県'}
+      {id: 1, name: '毎月', cycle: '1'}, {id: 2, name: '半年に1回', cycle: '6'}, {id: 3, name: '1年に1回', cycle: '12'}
   ]
 end
